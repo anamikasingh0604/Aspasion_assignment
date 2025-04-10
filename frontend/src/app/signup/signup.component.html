@@ -1,0 +1,34 @@
+<body>
+  <div class="container">
+      <div class="signup-box">
+          <h2>Sign Up</h2>
+          <form (ngSubmit)="onRegister()">
+              <div class="input-box">
+                  <input type="text" [(ngModel)]="name" name="name" required>
+                  <label>Name</label>
+              </div>
+              <div class="input-box">
+                  <input type="email" [(ngModel)]="email" name="email" required>
+                  <label>Email</label>
+              </div>
+              <div class="input-box">
+                  <input type="password" [(ngModel)]="password" name="password" required>
+                  <label>Password</label>
+              </div>
+              <div class="input-box">
+                  <input type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" required>
+                  <label>Phone Number</label>
+              </div>
+              <button type="submit" class="btn">Sign Up</button>
+              <div class="login-link">
+                  <p>Already have an account? 
+                    <a [routerLink]="['/login']" style="cursor: pointer; text-decoration: underline; color: rgb(63, 191, 238);">Login here</a>
+
+                  </p>
+              </div>
+          </form>
+      </div>
+      
+     
+  </div>
+</body>
